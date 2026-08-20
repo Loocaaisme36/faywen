@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>LooCaFay ^_^</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-sub: #a0a0a0;
+            --accent-color: #d4a373;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: system-ui;
+            line-height: 1.5;
+            padding: 20px 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 666px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-top: 12px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        .tools-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            border: 1px solid rgba(212, 163, 115, 0.2);
+        }
+
+        .tools-title {
+            font-size: 1.05rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-weight: bold;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        .tool-item span {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .nav-buttons-container {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: var(--card-bg);
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 163, 115, 0.3);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: background-color 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: rgba(212, 163, 115, 0.1);
+        }
+
+        .recipes-intro {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin-bottom: 16px;
+
+            font-weight: bold;
+        }
+
+        .recipe-section {
+            margin-bottom: 32px;
+            scroll-margin-top: 20px;
+        }
+
+        .recipe-title {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            padding-left: 4px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .recipe-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .badge {
+            background-color: var(--card-bg);
+            color: var(--accent-color);
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 163, 115, 0.3);
+        }
+
+        .steps-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .step-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 10px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .step-time-water {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .step-content {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        hr.divider {
+            border: none;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 32px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>LooCaFay ^_^</h1>
+            <p>咖啡，是一種液體，也稱作Coffee</p>
+        </header>
+
+        <div class="tools-card">
+            <div class="tools-title">泡咖啡的東東</div>
+            <div class="tools-list">
+                <div class="tool-item"><span>濾杯：</span>星芒濾杯、不鏽鋼濾杯、蛋糕濾杯</div>
+                <div class="tool-item"><span>濾紙：</span>漂白2-4人份、蛋糕155</div>
+                <div class="tool-item"><span>磨豆機：</span>泰摩C5 PRO</div>
+                <div class="tool-item"><span>研磨刻度：</span>大概12 - 14</div>
+                <div class="tool-item"><span>水溫：</span>約85°C - 95°C (飲水機熱水)</div>
+                <div class="tool-item"><span>下壺：</span>500ml玻璃壺</div>
+                <div class="tool-item"><span>杯子：</span>馬克杯、玻璃杯、各式小杯</div>
+                <div class="tool-item"><span>磅秤：</span>罐頭磅秤魚</div>
+            </div>
+        </div>
+
+        <div class="nav-buttons-container">
+            <a href="index.html" class="nav-btn">回首頁</a>
+        </div>
+
+        <div id="recipes-container"></div>
+    </div>
+
+    <script>
+        async function loadCoffeeData() {
+            try {
+                const response = await fetch('loocafay.json');
+                const coffeeData = await response.json();
+                
+                renderRecipes(coffeeData);
+            } catch (error) {
+                console.error('無法載入資料：', error);
+                document.getElementById('recipes-container').innerHTML = '<div style="color: #ff6b6b; text-align: center;">載入失敗</div>';
+            }
+        }
+
+        function renderRecipes(coffeeData) {
+            const container = document.getElementById('recipes-container');
+            
+            let htmlContent = '<div class="recipes-intro">記錄一下在網路上看到高手們分享的和我常用的沖法</div>';
+
+            coffeeData.recipes.forEach((recipe, index) => {
+                let badgesHtml = `
+                    <div class="recipe-badges">
+                        <span class="badge">豆量: ${recipe.beans}</span>
+                        ${recipe.grind && recipe.grind.trim() !== "" ? `<span class="badge">研磨度: ${recipe.grind}</span>` : ""}
+                        ${recipe.note && recipe.note.trim() !== "" ? `<span class="badge">備註: ${recipe.note}</span>` : ""}
+                        <span class="badge">時間: ${recipe.totalTime}</span>
+                    </div>
+                `;
+
+                let stepsHtml = '<div class="steps-list">';
+                recipe.steps.forEach(step => {
+                    stepsHtml += `
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-time-water">${step.label}</span>
+                            </div>
+                            <div class="step-content">${step.desc}</div>
+                        </div>
+                    `;
+                });
+                stepsHtml += '</div>';
+
+                htmlContent += `
+                    <div class="recipe-section">
+                        <h2 class="recipe-title">${recipe.name}</h2>
+                        ${badgesHtml}
+                        ${stepsHtml}
+                    </div>
+                `;
+
+                if (index < coffeeData.recipes.length - 1) {
+                    htmlContent += '<hr class="divider">';
+                }
+            });
+
+            container.innerHTML = htmlContent;
+        }
+
+        loadCoffeeData();
+    </script>
+</body>
+</html>
