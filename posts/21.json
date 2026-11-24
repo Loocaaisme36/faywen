@@ -1,0 +1,5 @@
+{
+  "id": 21,
+  "title": "DeskBuddy桌面夥伴",
+  "description": "DeskBuddy:\r\n整體大概是一個4.6*3.5*10(公分)的東東\r\n外殼是合板木片用熱熔膠固定\r\n裡面的部分，TTP223和OLED用熱熔膠固定\r\nESP32加外接一個TypeC頭固定在後面木片孔供電用\r\n底部木片用紙膠帶兩側固定當維修用\r\n\r\n目前功能:\r\n清醒 (Normal):每2~3秒就會左右動一下眼珠(2秒)或眨眼(150毫秒)\r\n笑臉 (Happy):偵測到觸摸互動，停留0.5秒後回到Normal\r\n睡眠 (Sleep):6分鐘無任何觸摸互動進入睡眠，3~6分鐘隨機喚醒\r\n起床 (Waking):半睜開方框眼狀態，睡覺時接收觸摸互動2秒\r\n爆閃模式:按住2秒不放，進入爆閃模式，再按一下回到Normal\r\n--\r\n材料(350):\r\n10*10合板木片*4(60)、ESP32-C3 supermini(85)、TTP223(Touch Sensor)(5)、0.96吋OLED(含支架)(90)、TypeC轉接頭*2(94)、其他(線材、耗材)(16)\r\n--\r\n合木板外殼(公分)():\r\n正面:上4*0.5、下4*1\r\n側面*2:3*10\r\n上下面*2:4*10\r\n背面:4*3\r\n\r\n內部:\r\n線路:\r\nOLED:\r\nSDA&SCL用杜邦線接到ESP32\r\nVCC&GND和TTP223的VCC&GND串完再接杜邦線到ESP32\r\n\r\nTTP223:\r\nTTP223 I/O 串杜邦線街頭到ESP32\r\n\r\n內部:\r\nESP32-C3 supermini、TTP223(Touch Sensor)、0.96吋OLED\r\nESP32 -> TYPEC供電\r\n元件到ESP32腳位:\r\nOLED SDA -> GPIO 6 (數據線)(最右)\r\nOLED SCL -> GPIO 7 (時鐘線)\r\nTTP223 I/O -> GPIO 2 (觸摸感測器輸出)\r\n\r\nOLED VCC+TTP223 VCC -> 3.3V (電源)\r\nOLED GND+TTP223 GND -> GND (接地)"
+}
